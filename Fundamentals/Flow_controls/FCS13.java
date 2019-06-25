@@ -1,0 +1,23 @@
+package Flow_controls;
+public class FCS13 {
+	public static void main(String[] args) {
+		int n=10;
+		for(;n<=99;n++) {
+			int cnt=1;
+			 if(n<2)
+		            cnt=0;
+		        if(n==2||n==3)
+		            cnt=1;
+		        if(n%2==0||n%3==0)
+		            cnt=0;
+		        for( int i=5;i<=Math.sqrt(n);i+=6)
+		        {
+		            if(n%i==0||n%(i+2)==0)
+		                cnt=0;
+		        }
+		        if(cnt==1) {
+		        	System.out.print(n+"\t");
+		        }
+		}
+	}
+}
